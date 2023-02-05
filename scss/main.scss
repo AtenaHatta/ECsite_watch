@@ -1,0 +1,25 @@
+//Don't write any code here, here is only for "@import"
+
+//Folder _abstract
+@import "./abstracts/mixin";
+@import "./abstracts/variables.scss";
+
+//Folder _layout
+@import "./layout/header.scss";
+@import "./layout/main";
+@import "./layout/navigation.scss";
+@import "./layout/sidebar.scss";
+@import "./layout/forms.scss";
+@import "./layout/grid.scss";
+@import "./layout/footer.scss";
+@import "./layout/contact";
+
+//Folder _vendors
+@import "./vendors/bootstrap";
+
+//Folder _component
+@import "./components/buttons.scss";
+
+
+
+
