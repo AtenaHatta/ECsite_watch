@@ -1,11 +1,93 @@
-ul {
-  list-style: none;
+header {
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
-
-.container {
+header .top-wrapper {
+  margin: 1%;
+}
+header .top-wrapper h1 {
+  margin: 0.5%;
+  padding: 0%;
+}
+header .top-wrapper a {
+  text-decoration: none;
+  color: black;
+}
+header .top-wrapper span {
   display: flex;
   justify-content: center;
+  justify-content: flex-end;
+  padding-right: 5%;
+}
+header .top-wrapper span i {
+  padding: 0 0.5rem;
+}
+header .top-wrapper div {
+  display: flex;
+  justify-content: center;
+}
+header .top-wrapper div nav ul {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+header .top-wrapper div nav ul li {
+  list-style: none;
+  padding: 0 5rem;
+  font-size: 1.1rem;
+}
+
+body {
+  font-family: "DM Serif Text", serif;
+}
+
+.first-wrapper {
+  margin-top: 10%;
+}
+.first-wrapper .top-image {
+  width: 80%;
+  height: 250px;
+  background: url("/img/top_img.jpg");
+  background-size: cover;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 5rem;
   align-items: center;
+}
+
+.topimage_text {
+  text-align: center;
+}
+
+.second-wrapper {
+  display: grid;
+  gap: 2em;
+  text-align: center;
+  margin: 10%;
+}
+.second-wrapper #left-box {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.second-wrapper #left-box .left-image {
+  width: 100%;
+  height: 400px;
+  background: url("/img/left_img.jpg");
+  background-size: cover;
+}
+.second-wrapper #right-box {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.second-wrapper #right-box .right-image {
+  width: 100%;
+  height: 400px;
+  background: url("/img/right_img.jpg");
+  background-size: cover;
 }
 
 /*# sourceMappingURL=main.css.map */
