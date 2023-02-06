@@ -1,7 +1,6 @@
 {
   "name": "ecsite_watch",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "sass": "sass scss:css -w"
@@ -11,5 +10,14 @@
   "license": "ISC",
   "dependencies": {
     "sass": "^1.58.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AtenaHatta/ECsite_watch.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AtenaHatta/ECsite_watch/issues"
+  },
+  "homepage": "https://github.com/AtenaHatta/ECsite_watch#readme",
+  "description": ""
 }
