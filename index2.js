@@ -22,6 +22,33 @@ fetch("http://localhost:3000/GetAllWatches")
       nextBtn.setAttribute("class", "next-btn");
       nextBtn.textContent = ">";
 
+      var image = document.createElement("img");
+      image.setAttribute("src", watch["image"][0]);
+
+
+
+      nextBtn.addEventListener("click", () => {
+        const currentImageSrc = image.src;
+        const currentIndexOfImage = watch["image"].indexOf(currentImageSrc);
+
+        if (currentIndexOfImage < watch["image"].length - 1) {
+          image.src = watch["image"][currentIndexOfImage + 1];
+        } else {
+          image.src = watch["image"][0];
+        }
+        });
+
+        prevBtn.addEventListener("click", () =>{
+            const currentImageSrc = image.src;
+            const currentIndexOfImage = watch["image"].indexOf(currentImageSrc);
+
+            if(currentIndexOfImage > 0){
+                image.src = watch["image"][currentIndexOfImage - 1];
+            }else{
+                image.src = watch["image"][watch["image"].length - 1]
+            }
+        })
+
       //H4
       var h4 = document.createElement("h4");
       h4.textContent = watch["Name"];
@@ -39,8 +66,6 @@ fetch("http://localhost:3000/GetAllWatches")
       // image.className = className
 
       // }
-      var image = document.createElement("img");
-      image.setAttribute("src", watch["image"]);
 
       var btn = document.createElement("button");
       btn.setAttribute("class", "add-btn");
@@ -58,13 +83,8 @@ fetch("http://localhost:3000/GetAllWatches")
       container.append(li);
     });
 
-    // watchData.forEach((imgWeWant) => {
-    //     window.addEventListener("click", () => {
-    //         img.setAttribute("src", imgWeWant["image"][1]);
-    //     });
-    // });
-    const img = document.querySelector("img");
-
-    const btnRight = document.querySelector(".next-btn");
-    const btnLeft = document.querySelector(".prev-btn");
+   
+    //Using this will select ONLY the first image that has the next-btn class 
+    // const btnRight = document.querySelector(".next-btn");
+    // const btnLeft = document.querySelector(".prev-btn");
   });
