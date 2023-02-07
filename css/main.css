@@ -48,15 +48,15 @@ ul {
 }
 .products .prev-btn {
   position: absolute;
-  top: 25%;
-  left: 25%;
+  top: 86%;
+  left: 3%;
   margin-left: 5px;
 }
 .products .next-btn {
   position: absolute;
-  top: 25%;
-  right: 25%;
-  margin-right: 10px;
+  top: 86%;
+  right: 3%;
+  margin-right: 5px;
 }
 
 form {

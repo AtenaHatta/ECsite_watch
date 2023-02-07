@@ -31,6 +31,55 @@ const watches = [
         "Name" : "Watch 4",
         "Description" : "Watch 4 description",
         "image" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiroHvzawCs1rdG5qG06gQI35__X0xEdHhKQ&usqp=CAU"
+    },
+    {
+        "id" : 5,
+        "Name" : "Watch 1",
+        "Description" : "Watch 1 description",
+        "image" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_N3O7AO4gnk1lnQZRUS1cfA_HG5Za50KmUMRWN3e4fto51Vd8TDcWNselEiOIpZG09II&usqp=CAU"
+    },
+    {
+        "id" : 6,
+        "Name" : "Rolex",
+        "Description" : "3546",
+        "image" : ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_N3O7AO4gnk1lnQZRUS1cfA_HG5Za50KmUMRWN3e4fto51Vd8TDcWNselEiOIpZG09II&usqp=CAU", 
+                   "https://content.rolex.com/dam/2022-11/upright-bba-with-shadow/m126720vtnr-0001.png?impolicy=v6-upright&imwidth=270" ]
+    },
+    {
+        "id" : 7,
+        "Name" : "Watch 1",
+        "Description" : "Watch 1 description",
+        "image" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_N3O7AO4gnk1lnQZRUS1cfA_HG5Za50KmUMRWN3e4fto51Vd8TDcWNselEiOIpZG09II&usqp=CAU"
+    },
+    {
+        "id" : 8,
+        "Name" : "Watch 1",
+        "Description" : "Watch 1 description",
+        "image" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_N3O7AO4gnk1lnQZRUS1cfA_HG5Za50KmUMRWN3e4fto51Vd8TDcWNselEiOIpZG09II&usqp=CAU"
+    },
+    {
+        "id" : 9,
+        "Name" : "Watch 1",
+        "Description" : "Watch 1 description",
+        "image" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_N3O7AO4gnk1lnQZRUS1cfA_HG5Za50KmUMRWN3e4fto51Vd8TDcWNselEiOIpZG09II&usqp=CAU"
+    },
+    {
+        "id" : 10,
+        "Name" : "Watch 1",
+        "Description" : "Watch 1 description",
+        "image" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_N3O7AO4gnk1lnQZRUS1cfA_HG5Za50KmUMRWN3e4fto51Vd8TDcWNselEiOIpZG09II&usqp=CAU"
+    },
+    {
+        "id" : 11,
+        "Name" : "Watch 1",
+        "Description" : "Watch 1 description",
+        "image" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_N3O7AO4gnk1lnQZRUS1cfA_HG5Za50KmUMRWN3e4fto51Vd8TDcWNselEiOIpZG09II&usqp=CAU"
+    },
+    {
+        "id" : 12,
+        "Name" : "Watch 1",
+        "Description" : "Watch 1 description",
+        "image" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_N3O7AO4gnk1lnQZRUS1cfA_HG5Za50KmUMRWN3e4fto51Vd8TDcWNselEiOIpZG09II&usqp=CAU"
     }
 
 
@@ -48,6 +97,6 @@ app.get('/GetAllWatches', (req, res) => {
     res.json(watches);
   })
 
-
+  // write an endpoint which gets a watch BY ID
   // Starts the server on port 3000
 app.listen(3000)
