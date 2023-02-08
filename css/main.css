@@ -24,6 +24,12 @@ ul {
   height: 350px;
   width: 350px;
 }
+.products .apiImg {
+  transition: transform 0.3s ease;
+}
+.products .apiImg:hover {
+  transform: scale(1.1);
+}
 .products .imageCarousel {
   position: relative;
 }

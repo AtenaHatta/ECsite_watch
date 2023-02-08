@@ -18,7 +18,8 @@ const watches = [
         "id" : 2,
         "Name" : "Watch 2",
         "Description" : "Watch 2 description",
-        "image" : ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_N3O7AO4gnk1lnQZRUS1cfA_HG5Za50KmUMRWN3e4fto51Vd8TDcWNselEiOIpZG09II&usqp=CAU"]
+        "image" : ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_N3O7AO4gnk1lnQZRUS1cfA_HG5Za50KmUMRWN3e4fto51Vd8TDcWNselEiOIpZG09II&usqp=CAU",
+    "https://toppng.com/uploads/preview/submariner-date-rolex-submariner-date-116618-11563269252pzhbhoa1cx.png"]
     },
     {
         "id" : 3,
@@ -98,5 +99,9 @@ app.get('/GetAllWatches', (req, res) => {
   })
 
   // write an endpoint which gets a watch BY ID
+// app.get('/getID', (req, res) => {
+//     res.json(watches{id})
+// })
+
   // Starts the server on port 3000
 app.listen(3000)
