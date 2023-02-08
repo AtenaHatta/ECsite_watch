@@ -1,185 +1,248 @@
 <!DOCTYPE html>
 <html lang="ja">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./css/main.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-  <title>Cartier</title>
-</head>
+    <link  rel="stylesheet" href="./css/main.css" />
+    <title>Kadiorv</title>
+  </head>
+  <body>
+    <!-- Atena writes code here -->
+    <header>
+      <div class="top-wrapper">
+          <!-- <i class="fa-solid fa-location-dot fa-lg"></i> -->
+           <button type="button" class="menu-btn">
+            <i class="fa-solid fa-bag-shopping fa-lg"></i>
+          </button>
 
-<body>
-  <!-- Atena writes code here -->
-  <header>
-    <div class="container">
-      <div>
-        <h1>Cartier</h1>
-      </div>
-      <nav>
-        <ul>
-          <i class="fa-solid fa-bag-shopping"></i>
-          <i class="fa-solid fa-location-dot"></i>
-        </ul>
-        <ul>
-          <li>Home</li>
-          <li>Features</li>
-          <li>Products</li>
-          <li>Contact</li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <section></section>
-  <section></section>
-
-  <!-- Gyunay writes code here -->
-  <section></section>
-  <section></section>
-  <section class="products">
-    <div class="container">
-      <ul class="ul-grid">
-
-      </ul>
-    </div>
-  </section>
-  <form>
-    <h2>Contact Form</h2>
-    <label for="name">Name:</label><br>
-    <input type="text" id="name" name="name" placeholder="Full Name"><br>
-    <label for="email">Email:</label><br>
-    <input type="text" id="email" name="email" placeholder="Email"><br>
-    <label for="message">Message:</label><br>
-    <textarea id="message" name="message" rows="5" cols="30" placeholder="Message"></textarea><br>
-    <input type="submit" value="Submit">
-  </form>
-  <!-- Footer -->
-  <footer class="text-center text-lg-start bg-light text-muted">
-    <!-- Section: Social media -->
-    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-      <!-- Left -->
-      <div class="me-5 d-none d-lg-block">
-        <span>Get connected with us on social networks:</span>
-      </div>
-      <!-- Left -->
-
-      <!-- Right -->
-      <div>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-google"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-github"></i>
-        </a>
-      </div>
-      <!-- Right -->
-    </section>
-    <!-- Section: Social media -->
-
-    <!-- Section: Links  -->
-    <section class="">
-      <div class="container text-center text-md-start mt-5">
-        <!-- Grid row -->
-        <div class="row mt-3">
-          <!-- Grid column -->
-          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-            <!-- Content -->
-            <h6 class="text-uppercase fw-bold mb-4">
-              <i class="fas fa-gem me-3"></i>Company name
-            </h6>
-            <p>
-              Here you can use rows and columns to organize your footer content. Lorem ipsum
-              dolor sit amet, consectetur adipisicing elit.
-            </p>
+          <!-- menu -->
+          <div class="menu">
+            <div class="menu__item">
+              <h2>SHOPPING BAG</h2>
+            </div>
+            <div class="cart-content">
+              <!-- cart item -->
+              <div class="cart-item">
+                <img src="./img/item.jpg" alt="product">
+                <h4>Cartier</h4>
+                <h5>$900.00</h5>
+                <span class="remove-item">remove</i></span>
+                <i class="fas fa-chevron-up"></i>
+                <p class="item-amount">1</p>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="cart-footer">
+                <h3>your total : <span class="cart-total">0</span></h3>
+                <button class="clear-cart banner-btn">clear cart</button>
+              </div>
+            </div>
           </div>
-          <!-- Grid column -->
 
-          <!-- Grid column -->
-          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">
-              Products
-            </h6>
-            <p>
-              <a href="#!" class="text-reset">Angular</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">React</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Vue</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Laravel</a>
-            </p>
-          </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">
-              Useful links
-            </h6>
-            <p>
-              <a href="#!" class="text-reset">Pricing</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Settings</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Orders</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Help</a>
-            </p>
-          </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-            <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
-            <p>
-              <i class="fas fa-envelope me-3"></i>
-              info@example.com
-            </p>
-            <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-            <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
-          </div>
-          <!-- Grid column -->
+        <div>
+          <h1>Kadirov</h1>
         </div>
-        <!-- Grid row -->
+        <div>
+          <nav>
+            <ul>
+              <li><a href="#section1" class="js-pagelink">Home</a></li>
+              <li><a href="#section2" class="js-pagelink">Features</a></li>
+              <li><a href="#section3">Products</a></li>
+              <li><a href="#section4">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <section id="section1" class="section">
+<br>
+          <div class="first-wrapper">
+            <video class="video" src="./img/video.mp4" autoplay loop></video>
+          <div class="topimage_text">
+            <h2>"HOW FAR WOULD YOU GO FOR LOVE"</h2>
+            <p>
+              Celebrate with gifts that speak to the heart
+            </p>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section>
+      <section id="section2" class="section">
+<br>
+          <div class="scroll-up">
+          <div class="second-wrapper">
+            <div id="left-box">
+              <div class="left-image"></div>
+              <h3>DIAMONDS FOR A LIFETIME</h3>
+              <p>For the most memorable moment</p>
+            </div>
+            <div id="right-box">
+              <div class="right-image"></div>
+              <h3>LOVE</h3>
+              <p>A declaration in one simple word</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section> 
+
+    <section id="section3" class="section">
+<br>
+<br>
+<br>
+    <section class="products">
+      <div class="container">
+        <ul class="ul-grid"></ul>
       </div>
     </section>
-    <!-- Section: Links  -->
 
-    <!-- Copyright -->
-    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-      Created by Atena and Gyunay
-    </div>
-    <!-- Copyright -->
-  </footer>
-  <!-- Footer -->
-</body>
-<script src="./index1.js"></script>
-<script src="./index2.js"></script>
-<script src="https://kit.fontawesome.com/11e84373e1.js" crossorigin="anonymous"></script>
-
-</html>
+    <section id="section4" class="section">
+<br>
+    <form>
+      <h2>Contact Form</h2>
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name" placeholder="Full Name"><br>
+      <label for="email">Email:</label><br>
+      <input type="text" id="email" name="email" placeholder="Email"><br>
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" rows="5" cols="30" placeholder="Message"></textarea><br>
+      <input type="submit" value="Submit">
+    </form>
+    
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-light text-muted">
+      <!-- Section: Social media -->
+      <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+        <!-- Left -->
+        <div class="me-5 d-none d-lg-block">
+          <span>Get connected with us on social networks:</span>
+        </div>
+        <!-- Left -->
+  
+        <!-- Right -->
+        <div>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-google"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+        <!-- Right -->
+      </section>
+      <!-- Section: Social media -->
+  
+      <!-- Section: Links  -->
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+          <!-- Grid row -->
+          <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <!-- Content -->
+              <h6 class="text-uppercase fw-bold mb-4">
+                <i class="fas fa-gem me-3"></i>Company name
+              </h6>
+              <p>
+                Here you can use rows and columns to organize your footer content. Lorem ipsum
+                dolor sit amet, consectetur adipisicing elit.
+              </p>
+            </div>
+            <!-- Grid column -->
+  
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">
+                Products
+              </h6>
+              <p>
+                <a href="#!" class="text-reset">Angular</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">React</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Vue</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Laravel</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+  
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">
+                Useful links
+              </h6>
+              <p>
+                <a href="#!" class="text-reset">Pricing</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Settings</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Orders</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Help</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+  
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+              <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+              <p>
+                <i class="fas fa-envelope me-3"></i>
+                info@example.com
+              </p>
+              <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+              <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+        </div>
+      </section>
+      <!-- Section: Links  -->
+  
+      <!-- Copyright -->
+      <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+        &copy;2023 A&G
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+  </body>
+  <script src="./index1.js"></script>
+  <script src="./index2.js"></script>
+  <script src="https://kit.fontawesome.com/11e84373e1.js" crossorigin="anonymous"></script>
+  
+  </html>
