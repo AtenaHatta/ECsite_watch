@@ -1,7 +1,18 @@
-
 body{
   font-family: $fontFamily;
+  color: var(--main-text);
+  background: var(--main-bg);
 }
+
+.light-mode{
+  --main-text: #000;
+  --main-bg: #fff;
+}
+.dark-mode{
+  --main-text: #fff;
+  --main-bg: #202124;
+}
+
 
 .first-wrapper{
   margin-top: 7%;
@@ -53,7 +64,6 @@ body{
 }
 
 .products {
-  
   li {
     display: flex;
     flex-wrap: wrap;
