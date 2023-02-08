@@ -211,4 +211,98 @@ body {
   transform: translateX(0);
 }
 
+.products li {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+.products li .add-btn {
+  width: 100%;
+  background-color: black;
+  color: whitesmoke;
+  height: 43px;
+}
+.products img {
+  height: 350px;
+  width: 350px;
+}
+.products .imageCarousel {
+  position: relative;
+}
+.products .prev-btn,
+.products .next-btn {
+  display: inline-block;
+  padding: 8px 12px;
+  width: auto;
+  line-height: normal;
+  cursor: pointer;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: none;
+  border-radius: 50%;
+  transition: background-color 0.5s ease;
+  transition: color 0.5s ease;
+}
+.products .prev-btn:hover,
+.products .next-btn:hover {
+  color: rgb(255, 252, 252);
+  background: rgb(212, 193, 42);
+}
+.products .prev-btn {
+  position: absolute;
+  top: 86%;
+  left: 3%;
+  margin-left: 5px;
+}
+.products .next-btn {
+  position: absolute;
+  top: 86%;
+  right: 3%;
+  margin-right: 5px;
+}
+
+form {
+  margin-top: 70px;
+  margin-left: 650px;
+  padding: 20px;
+  background-color: rgba(245, 245, 245, 0.9960784314);
+  width: 20%;
+}
+form h2 {
+  padding-bottom: 10px;
+}
+form label {
+  display: block;
+  margin-bottom: 10px;
+  color: rgb(10, 10, 10);
+  font-size: 25px;
+}
+form input[type=text],
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  border: 1px solid rgba(161, 180, 186, 0.554);
+}
+form input[type=submit] {
+  background-color: #2f6164;
+  color: rgb(255, 255, 255);
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+form input[type=submit]:hover {
+  background-color: #4083aa;
+}
+
+.ul-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  padding-top: 50px;
+}
+
 /*# sourceMappingURL=main.css.map */

@@ -10,3 +10,9 @@
   gap: 2em;
 }
 
+@mixin grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  padding-top: 50px;
+}

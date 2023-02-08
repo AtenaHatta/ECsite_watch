@@ -1,15 +1,26 @@
 {
   "name": "ecsite_watch",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass scss:css -w"
+    "sass": "sass scss:css -w",
+    "dev": "nodemon backend/app"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
     "sass": "^1.58.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AtenaHatta/ECsite_watch.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AtenaHatta/ECsite_watch/issues"
+  },
+  "homepage": "https://github.com/AtenaHatta/ECsite_watch#readme",
+  "description": ""
 }
