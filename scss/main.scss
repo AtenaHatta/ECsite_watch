@@ -1,5 +1,3 @@
-//Don't write any code here, here is only for "@import"
-
 //Folder _abstract
 @import "./abstracts/mixin";
 @import "./abstracts/variables.scss";
@@ -12,13 +10,15 @@
 @import "./layout/forms.scss";
 @import "./layout/grid.scss";
 @import "./layout/footer.scss";
-@import "./layout/contact";
 
 //Folder _vendors
 @import "./vendors/bootstrap";
 
 //Folder _component
 @import "./components/buttons";
+
+
+//Don't write any code here, here is only for "@import"
 
 
 

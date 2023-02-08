@@ -41,13 +41,11 @@ function smoothScroll(e) {
     window.scrollTo({
         top: scrollPosition,
         behavior: "smooth"
-        
     });
 }
 
 
 // Shopping cart menu ----------------------------------------
-
 document.querySelector('.menu-btn').addEventListener('click', function(){
   document.querySelector('.menu').classList.toggle('is-active');
 });
