@@ -62,18 +62,108 @@ fetch("http://localhost:3000/GetAllWatches")
       btn.setAttribute("class", "add-btn");
       btn.textContent = "ADD TO BAG";
 
+
+
+      btn.addEventListener('click', () => {
+        //we create the div item 
+        var cartDivItem = document.createElement('div')
+        cartDivItem.setAttribute('class', 'cart-item')
+
+        //we create the img tag
+        var cartImage = document.createElement('img')
+        cartImage.src = watch["image"]
+        
+        //we create the h4 tag
+        var cartH4 = document.createElement('h4')
+        cartH4.textContent = watch["Name"]
+
+        //we create the h5 tag
+        var cartH5 = document.createElement('h5')
+        cartH5.textContent = watch["Description"]
+
+        //we create the span
+        var cartSpan = document.createElement('span')
+        cartSpan.setAttribute('class', 'remove-item')
+        cartSpan.textContent = "remove"
+
+        //we create the arrow up
+        var arrowUp = document.createElement('i')
+        arrowUp.setAttribute('class', 'fas fa-chevron-up higher-amount')
+
+        //we create the p tag
+        var cartPara = document.createElement('p')
+        cartPara.setAttribute('class', 'item-amount')
+        cartPara.textContent = '1'
+
+        // we create the arrow down item
+        var arrowDown = document.createElement('i')
+        arrowDown.setAttribute('class', 'fas fa-chevron-down lower-amount')
+
+        cartDivItem.append(cartImage)
+        cartDivItem.append(cartH4)
+        cartDivItem.append(cartH5)
+        cartDivItem.append(cartSpan)
+        cartDivItem.append(arrowUp)
+        cartDivItem.append(cartPara)
+        cartDivItem.append(arrowDown)
+
+        cartContainer.append(cartDivItem)
+        
+       //document.body.insertBefore (cartContainer, appBef)
+
+
+       //////////////////------------////////////////////
+        //cart top footer section
+
+        
+
+
+
+
+        //////////////////------------////////////////////
+        cartValue.textContent = watch["Description"]
+
+
+
+
+        var cartItems = document.querySelector(".cart-item")
+
+        // cartLogic(){
+        //   removeBtn.addEventListener('click', () => {
+        //     cartItems.remove();
+        //   })
+        // }
+
+        // clearCart(){
+        //   let cartItems2 = cartItems.map()
+        // }
+        
+
+        // removeBtn.addEventListener('click', () => {
+        //   document.querySelector('.cart-content').innerHTML=`<div class="cart-footer">
+        //   <h3>your total : <span class="cart-total">0</span></h3>
+        //   <button class="clear-cart banner-btn" id="removeAll">clear cart</button>
+        // </div>`
+        // })
+        
+      })
+      
+      
       div.append(image);
       div.append(prevBtn);
       div.append(nextBtn);
-
+      
       li.append(div);
       li.append(h4);
       li.append(para);
       li.append(btn);
-
+      
       container.append(li);
     });
-
+    
+    const removeBtn = document.getElementById("removeAll")
+    const cartValue = document.querySelector('.cart-total')
+    const cartContainer = document.querySelector('.cart-content')
     //Using this will select ONLY the first image that has the next-btn class
     // const btnRight = document.querySelector(".next-btn");
     // const btnLeft = document.querySelector(".prev-btn");

@@ -9,8 +9,8 @@ app.use(cors())
 const watches = [
     {
         "id" : 1,
-        "Name" : "Watch 1",
-        "Description" : "Watch 1 description",
+        "Name" : "Rolex Submerina",
+        "Description" : "$2000",
         "image" : ["https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw192c8222/images/large/637709174551867959-2059087.png?sw=750&sh=750&sm=fit&sfrm=png", "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw490a1338/images/large/637709174551867959-2059117.png?sw=2000&sh=2000&sm=fit&sfrm=png"]
     },
 
