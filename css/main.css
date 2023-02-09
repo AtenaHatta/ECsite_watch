@@ -180,6 +180,10 @@ body {
   margin-right: 5px;
 }
 
+.header-active {
+  background-color: rgb(217, 217, 217);
+}
+
 .cart-item {
   display: grid;
   align-items: center;
@@ -214,7 +218,7 @@ body {
   grid-column: 3/4;
   grid-row: 2/3;
 }
-.cart-item .remove-item {
+.cart-item #remove-item {
   color: rgb(105, 104, 104);
   cursor: pointer;
   grid-column: 2/3;
