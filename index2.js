@@ -4,13 +4,15 @@
 fetch("http://localhost:3000/GetAllWatches")
   .then((res) => res.text())
   .then((watchData) => {
+
     watchData = JSON.parse(watchData);
+    console.log(watchData)
     var container = document.getElementsByClassName("ul-grid")[0];
     // for each watch in the resulting data we create Javascript elements to put into the DOM.
-    watchData.forEach((watch) => {
+    watchData.forEach((watch,i) => {
       //li
       var li = document.createElement("li");
-
+console.log(i)
       //div
       var div = document.createElement("div");
       div.setAttribute("class", "imageCarousel");
@@ -46,8 +48,6 @@ fetch("http://localhost:3000/GetAllWatches")
         } else {
           image.src = watch["image"][watch["image"].length - 1];
         }
-
-        
       });
 
       //H4
@@ -56,7 +56,7 @@ fetch("http://localhost:3000/GetAllWatches")
 
       //P tag
       var para = document.createElement("p");
-      para.textContent = watch["Description"];
+      para.textContent = "$" + watch.Description;
 
       //big button
       var btn = document.createElement("button");
@@ -105,46 +105,91 @@ fetch("http://localhost:3000/GetAllWatches")
         cartDivItem.append(arrowUp);
         cartDivItem.append(cartPara);
         cartDivItem.append(arrowDown);
-
-        cartContainer.append(cartDivItem);
-
-       //////////////===================///////////////////
-
         
-        cartValue.textContent = watch["Description"];
-
         
-        //remove all items
-        // var cartItems = document.querySelector(".cart-item");
+        cartContainer[i].append(cartDivItem);
+
+        //////////////===================///////////////////
+
+        // const removeBtn = document.getElementById('removeAll')
+        // //remove all items
+        // var cartItems = document.querySelectorAll(".cart-item");
         // removeBtn.addEventListener("click", () => {
-        //   cartItems.remove();
+        //   // cartItems.remove();
+        //   cartItems.forEach((item) => {
+        //     item.remove()
+        //   })
         // });
-        
-        //remove one items 
+
+        //remove one items
         // cartContainer.addEventListener('click', (e) => {
         //   console.dir(e.target);
         //   if (e.target.parentElement.childNodes[3] === "remove-item") {
         //     const listToDelete = e.target.parentNode;
-        //     cartItems.removeChild(listToDelete)            
+        //     cartItems.remove()
         //   }
         // })
-        
-        
+
         removeAll.addEventListener("click", deleteProduct);
         function deleteProduct(e) {
           let cartItem;
-          if (e.target.tagName === "awd") {
+          if (e.target.tagName === "BUTTON") {
+            cartItem = e.target.parentElement.previousElementSibling;
+            cartItem.innerHTML = ""; // this removes from the DOM only
+          }
+        }
+
+        removeOneItem.addEventListener("click", deleteOneItem);
+
+        function deleteOneItem(e) {
+          console.dir(removeOneItem);
+          let cartItem;
+          if (e.target.tagName === "SPAN") {
             cartItem = e.target.parentElement;
             cartItem.remove(); // this removes from the DOM only
-          } else if (e.target.tagName === "BUTTON") {
-            cartItem = e.target.parentElement;
-            cartItem.previousSibling.remove(); // this removes from the DOM only
-          }}
+          }
+        }
 
+        let state = { counter: 1 };
+        const counter = cartDivItem.querySelector(".item-amount");
+        arrowUp.addEventListener("click", (e) => {
+          counter.textContent = ++state.counter;
+        });
+
+        arrowDown.addEventListener("click", () => {
+          if (Number(counter.textContent) > 1) {
+            counter.textContent = --state.counter;
+          }
+        });
+
+        
+        
+        // Sum()
+        // function Sum() {
+        //   let SumHolder = 0;
+        //   SumHolder += watch.Description;
+        //   cartSumValue.textContent = SumHolder;
+        // }
+        
+        console.dir(cartContainer);
+
+
+        
+          
+          let value = 0
+          cartContainer.forEach(item => {
+            if(item.target.children === '.cart-item'){
+              value += childNodes[2].textContent
+              cartSumValue.textContent = value
+            }
+  
+          });
         
 
 
       })
+
+
 
       div.append(image);
       div.append(prevBtn);
@@ -158,21 +203,19 @@ fetch("http://localhost:3000/GetAllWatches")
       container.append(li);
     });
 
+    const removeOneItem = document.querySelector(".cart-content");
     const removeAll = document.querySelector(".cart-footer");
-    const removeBtn = document.getElementById("removeAll");
-    const cartValue = document.querySelector(".cart-total");
+    const cartSumValue = removeAll.querySelector(".cart-total");
     const cartContainer = document.querySelector(".cart-content");
     //Using this will select ONLY the first image that has the next-btn class
     // const btnRight = document.querySelector(".next-btn");
     // const btnLeft = document.querySelector(".prev-btn");
-  });
   
+  });
 
-
-
-//Header Scroll background change  
- const headerColor = document.querySelector(".header-fixed");
- window.onscroll = () => {
+//Header Scroll background change
+const headerColor = document.querySelector(".header-fixed");
+window.onscroll = () => {
   if (window.scrollY > 100) {
     headerColor.classList.add("header-active");
   } else {

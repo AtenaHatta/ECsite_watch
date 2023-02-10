@@ -237,6 +237,10 @@ body {
   grid-row: 3/4;
 }
 
+.menu {
+  overflow-y: scroll;
+}
+
 form {
   margin-top: 70px;
   margin-left: 650px;

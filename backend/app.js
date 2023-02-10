@@ -10,76 +10,76 @@ const watches = [
     {
         "id" : 1,
         "Name" : "Rolex Submerina",
-        "Description" : "$2500",
+        "Description" : 4000,
         "image" : ["https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw192c8222/images/large/637709174551867959-2059087.png?sw=750&sh=750&sm=fit&sfrm=png", "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw490a1338/images/large/637709174551867959-2059117.png?sw=2000&sh=2000&sm=fit&sfrm=png"]
     },
 
     {
         "id" : 2,
         "Name" : "Rolex ",
-        "Description" : "$2000",
+        "Description" : 5456,
         "image" : ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_N3O7AO4gnk1lnQZRUS1cfA_HG5Za50KmUMRWN3e4fto51Vd8TDcWNselEiOIpZG09II&usqp=CAU",
-    "https://toppng.com/uploads/preview/submariner-date-rolex-submariner-date-116618-11563269252pzhbhoa1cx.png"]
+        "https://toppng.com/uploads/preview/submariner-date-rolex-submariner-date-116618-11563269252pzhbhoa1cx.png"]
 
     },
     {
         "id" : 3,
         "Name" : "Rolex ",
-        "Description" : "$2500",
+        "Description" : 7999,
         "image" : ["https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw192c8222/images/large/637709174551867959-2059087.png?sw=750&sh=750&sm=fit&sfrm=png", "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw490a1338/images/large/637709174551867959-2059117.png?sw=2000&sh=2000&sm=fit&sfrm=png"]
     },
     {
         "id" : 4,
         "Name" : "Rolex ",
-       "Description" : "$2000",
+       "Description" : 29999,
         "image" : ["https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw192c8222/images/large/637709174551867959-2059087.png?sw=750&sh=750&sm=fit&sfrm=png", "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw490a1338/images/large/637709174551867959-2059117.png?sw=2000&sh=2000&sm=fit&sfrm=png"]
     },
     {
         "id" : 5,
         "Name" : "Rolex ",
-       "Description" : "$2500",
+       "Description" : 8791,
         "image" : ["https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw192c8222/images/large/637709174551867959-2059087.png?sw=750&sh=750&sm=fit&sfrm=png", "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw490a1338/images/large/637709174551867959-2059117.png?sw=2000&sh=2000&sm=fit&sfrm=png"]
     },
     {
         "id" : 6,
         "Name" : "Rolex",
-       "Description" : "$2000", 
+       "Description" : 2000, 
        "image": ["https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw192c8222/images/large/637709174551867959-2059087.png?sw=750&sh=750&sm=fit&sfrm=png", "https://content.rolex.com/dam/2022-11/upright-bba-with-shadow/m126720vtnr-0001.png?impolicy=v6-upright&imwidth=270" ]
     },
     {
         "id" : 7,
         "Name" : "Rolex ",
-       "Description" : "$5000",
+       "Description" : 8321,
         "image" : ["https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw192c8222/images/large/637709174551867959-2059087.png?sw=750&sh=750&sm=fit&sfrm=png", "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw490a1338/images/large/637709174551867959-2059117.png?sw=2000&sh=2000&sm=fit&sfrm=png"]
     },
     {
         "id" : 8,
         "Name" : "Rolex ",
-       "Description" : "$2000",
+       "Description" : 7521,
         "image" : ["https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw192c8222/images/large/637709174551867959-2059087.png?sw=750&sh=750&sm=fit&sfrm=png", "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw490a1338/images/large/637709174551867959-2059117.png?sw=2000&sh=2000&sm=fit&sfrm=png"]
     },
     {
         "id" : 9,
         "Name" : "Rolex ",
-       "Description" : "$2500",
+       "Description" : 8784,
         "image" : ["https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw192c8222/images/large/637709174551867959-2059087.png?sw=750&sh=750&sm=fit&sfrm=png", "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw490a1338/images/large/637709174551867959-2059117.png?sw=2000&sh=2000&sm=fit&sfrm=png"]
     },
     {
         "id" : 10,
         "Name" : "Rolex ",
-       "Description" : "$2500",
+       "Description" : 7642,
         "image" : ["https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw192c8222/images/large/637709174551867959-2059087.png?sw=750&sh=750&sm=fit&sfrm=png", "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw490a1338/images/large/637709174551867959-2059117.png?sw=2000&sh=2000&sm=fit&sfrm=png"]
     },
     {
         "id" : 11,
         "Name" : "Rolex ",
-       "Description" : "$2000",
+       "Description" : 74581,
         "image" : ["https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw192c8222/images/large/637709174551867959-2059087.png?sw=750&sh=750&sm=fit&sfrm=png", "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw490a1338/images/large/637709174551867959-2059117.png?sw=2000&sh=2000&sm=fit&sfrm=png"]
     },
     {
         "id" : 12,
         "Name" : "Rolex ",
-       "Description" : "$2500",
+       "Description" : 100000,
         "image" : ["https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw192c8222/images/large/637709174551867959-2059087.png?sw=750&sh=750&sm=fit&sfrm=png", "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw490a1338/images/large/637709174551867959-2059117.png?sw=2000&sh=2000&sm=fit&sfrm=png"]
     }
 
