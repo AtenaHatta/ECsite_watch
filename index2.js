@@ -107,7 +107,7 @@ console.log(i)
         cartDivItem.append(arrowDown);
         
         
-        cartContainer[i].append(cartDivItem);
+        cartContainer.append(cartDivItem);
 
         //////////////===================///////////////////
 
@@ -132,10 +132,15 @@ console.log(i)
 
         removeAll.addEventListener("click", deleteProduct);
         function deleteProduct(e) {
+          let value = "$ " + 0;
           let cartItem;
+          let clearLast ;                        
           if (e.target.tagName === "BUTTON") {
             cartItem = e.target.parentElement.previousElementSibling;
-            cartItem.innerHTML = ""; // this removes from the DOM only
+            clearLast = e.target.previousElementSibling
+            cartItem.innerHTML = ""
+            clearLast.innerHTML = value
+            console.dir(clearLast);// this removes from the DOM only
           }
         }
 
@@ -146,7 +151,11 @@ console.log(i)
           let cartItem;
           if (e.target.tagName === "SPAN") {
             cartItem = e.target.parentElement;
-            cartItem.remove(); // this removes from the DOM only
+            cartItem.remove();
+
+
+            SumCalculatorNegative()
+             // this removes from the DOM only
           }
         }
 
@@ -154,6 +163,7 @@ console.log(i)
         const counter = cartDivItem.querySelector(".item-amount");
         arrowUp.addEventListener("click", (e) => {
           counter.textContent = ++state.counter;
+
         });
 
         arrowDown.addEventListener("click", () => {
@@ -174,16 +184,34 @@ console.log(i)
         console.dir(cartContainer);
 
 
+          SumCalculator()
         
-          
-          let value = 0
-          cartContainer.forEach(item => {
-            if(item.target.children === '.cart-item'){
-              value += childNodes[2].textContent
-              cartSumValue.textContent = value
-            }
-  
-          });
+          function SumCalculator() {
+            
+            
+            let value = 0
+            Array.from(cartContainer.children).forEach(item => {
+              
+              if(item.className === 'cart-item'){
+                value = value + Number(item.childNodes[2].textContent)
+                cartSumValue.textContent = value
+              }
+              const finalValue = value
+            });
+          }
+
+           
+          function SumCalculatorNegative() {
+            
+            let value = "";
+            Array.from(cartContainer.children).forEach(item => {
+              
+              if(item.className === 'cart-item'){
+                value -= Number(item.childNodes[2].textContent)
+                cartSumValue.textContent = value
+              }
+            });
+          }
         
 
 
