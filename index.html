@@ -5,55 +5,55 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap" rel="stylesheet"/> 
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- CSS -->
     <link  rel="stylesheet" href="./css/main.css" />
     <title>Kadiorv</title>
   </head>
   <body>
-    <!-- Atena writes code here -->
-    <header>
-      <div class="top-wrapper">
-          <!-- <i class="fa-solid fa-location-dot fa-lg"></i> -->
-          <i class="fa-regular fa-lightbulb fa-lg"></i>
-           <button type="button" class="menu-btn">
-            <input type="checkbox" name="dark-mode" id="btn-dark-mode">
 
+    <header class="header-fixed">
+      <div class="top-wrapper">  
+           <button type="button" class="menu-btn">
             <div class="cart-btn snipcart-checkout">
               <span class="nav-icon">
+                  <div class="cart-counter"></div>
                   <i class="fas fa-cart-plus fa-lg"></i>
               </span>
-              <span class="cart-items snipcart-items-count"></span>
           </div>
-            <!-- <i class="fa-solid fa-bag-shopping fa-lg"></i> -->
           </button>
 
-          <!-- menu -->
+          <!-- click menu -->
           <div class="menu">
             <div class="menu__item">
               <h2>SHOPPING BAG</h2>
             </div>
             <div class="cart-content">
               <!-- cart item -->
-              <div class="cart-item">
+              <!-- <div class="cart-item">
                 <img src="./img/item.jpg" alt="product">
                 <h4>Cartier</h4>
                 <h5>$900.00</h5>
                 <span class="remove-item">remove</i></span>
                 <i class="fas fa-chevron-up"></i>
-                <p class="item-amount">1</p>
+                <p class="item-amount">0</p>
                 <i class="fas fa-chevron-down"></i>
-              </div>
-              <div class="cart-footer">
-                <h3>your total : <span class="cart-total">0</span></h3>
-                <button class="clear-cart banner-btn">clear cart</button>
-              </div>
+              </div> -->
+            </div>
+            <div class="cart-footer">
+              <h3 id="total">your total : <span class="cart-total">0</span></h3>
+              <button class="clear-cart banner-btn">clear cart</button>
             </div>
           </div>
 
+
+        <!-- header menu -->  
         <div>
           <h1>Kadirov</h1>
         </div>
@@ -62,21 +62,23 @@
             <ul>
               <li><a href="#section1" class="js-pagelink">Home</a></li>
               <li><a href="#section2" class="js-pagelink">Features</a></li>
-              <li><a href="#section3">Products</a></li>
-              <li><a href="#section4">Contact</a></li>
+              <li><a href="#section3" class="js-pagelink">Products</a></li>
+              <li><a href="#section4" class="js-pagelink">Contact</a></li>
             </ul>
           </nav>
         </div>
       </div>
     </header>
 
+
+     <!-- Main-->
     <section>
       <section id="section1" class="section">
 <br>
           <div class="first-wrapper">
-            <video class="video" src="./img/video.mp4" autoplay loop></video>
+            <video class="video" src="./img/video.mp4" autoplay muted loop></video>
           <div class="topimage_text">
-            <h2>"HOW FAR WOULD YOU GO FOR LOVE"</h2>
+            <h2>HOW FAR WOULD YOU GO FOR LOVE</h2>
             <p>
               Celebrate with gifts that speak to the heart
             </p>
@@ -85,30 +87,55 @@
       </section>
     </section>
 
+
+    <!-- Features -->
     <section>
       <section id="section2" class="section">
 <br>
-          <div class="scroll-up">
           <div class="second-wrapper">
-            <div id="left-box">
-              <div class="left-image"></div>
-              <h3>DIAMONDS FOR A LIFETIME</h3>
-              <p>For the most memorable moment</p>
-            </div>
+              <div class="slideContsL slideConts">
+              <div id="left-box">
+                <div class="left-image"></div>
+                <div class="sentences1">
+                  <h3>DIAMONDS FOR A LIFETIME</h3>
+                  <p>Discover the Maison’s timepieces by the characteristics most important to you, to find your ultimate Cartier watch.</p>
+                  <img class="left-image2" src="./img/left_img_2.jpg" width="60%">
+                </div>
+              </div>
+          </div>
+            <div class="slideContsR slideConts">
             <div id="right-box">
               <div class="right-image"></div>
-              <h3>LOVE</h3>
-              <p>A declaration in one simple word</p>
+              <div class="sentences2">
+              <h3>A watch that doubles as a piece of jewelry</h3>
+              <p>It is amplified by originality and uniquely powerful, bringing together elements that go beyond classic watchmaking.</p>
+              <img class="left-image2" src="./img/right_img_2.jpg" width="80%">
+             </div>
             </div>
-          </div>
         </div>
+      </div>
+
+          <!-- </div>
+        </div> -->
       </section>
     </section> 
 
+
+
+    <!-- Products -->
     <section id="section3" class="section">
 <br>
 <br>
-<br>
+    <div class="product_header">
+       <img src="./img/products_header.jpg" width="40%">
+      <div class="product_header_text">
+       <h1>Products</h1>
+       <p>With its sculptural case and polished bracelet, <br>
+        the Ballon Bleu defies gravity with its ethereal charm. </p>
+      </div>
+    </div>
+  </div>
+
     <section class="products">
       <div class="container">
         <ul class="ul-grid"></ul>
@@ -116,6 +143,8 @@
     </section>
 
     <section id="section4" class="section">
+<br>
+<br>
 <br>
    <section class="container">
     <form>
@@ -128,9 +157,10 @@
       <textarea id="message" name="message" rows="5" cols="30" placeholder="Message"></textarea><br>
       <input type="submit" value="Submit">
     </form>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d20820.769993934668!2d-123.15407266121969!3d49.284047293692794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1scartier!5e0!3m2!1sja!2sca!4v1675885441555!5m2!1sja!2sca" width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d20820.769993934668!2d-123.15407266121969!3d49.284047293692794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1scartier!5e0!3m2!1sja!2sca!4v1675885441555!5m2!1sja!2sca" width="500" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
     
+
     <!-- Footer -->
     <footer class="text-center text-lg-start bg-light text-muted">
       <!-- Section: Social media -->
@@ -230,7 +260,7 @@
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
               <!-- Links -->
               <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-              <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+              <p><i class="fas fa-home me-3"></i> 751 Burrard St, Vancouver, BC Canada</p>
               <p>
                 <i class="fas fa-envelope me-3"></i>
                 info@example.com
@@ -245,6 +275,7 @@
       </section>
       <!-- Section: Links  -->
   
+
       <!-- Copyright -->
       <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
         &copy;2023 A&G
@@ -253,8 +284,8 @@
     </footer>
     <!-- Footer -->
   </body>
-  <script src="./index1.js"></script>
   <script src="./index2.js"></script>
+  <script src="./index1.js"></script>
   <script src="https://kit.fontawesome.com/11e84373e1.js" crossorigin="anonymous"></script>
   
   </html>

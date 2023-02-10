@@ -13,7 +13,7 @@ body{
   --main-bg: #202124;
 }
 
-
+// Main ----------------------------------------
 .first-wrapper{
   margin-top: 7%;
   .video{
@@ -33,37 +33,101 @@ body{
   }
 }
 
+// Features ----------------------------------------
 .second-wrapper{
-  @include gridBox;
-  text-align: center;
   margin: 10%;
+  margin-bottom: -219px;
   #left-box{
-    grid-column: 1/2;
-    grid-row: 1/2;
+    @include gridBox;
+    // width: 800px;
+    margin:5%;
+    vertical-align:middle;
     .left-image{
-      width: 100%;
-      height: 400px;
+      grid-column: 1/2;
+      grid-row: 1/2;
+      width: 500px;
+      height: 450px;
       background: url("/img/left_img.jpg");
       background-size: cover;
     }
+    .sentences1{
+      grid-column: 2/3;
+      grid-row: 1/2;
+      width: 300px;
+    }
   }
   #right-box{
-    grid-column: 2/3;
-    grid-row: 1/2;
+    @include gridBox;
+    margin:5%;
+    // width: 800px;
     .right-image{
-      width: 100%;
+      grid-column: 2/3;
+      grid-row: 1/2;
+      width: 500px;
       height: 400px;
       background: url("/img/right_img.jpg");
       background-size: cover;
+    }
+    .sentences2{
+      grid-column: 1/2;
+      grid-row: 1/2;
+      width: 300px;
     }
   }
 }
 
 .container {
   @include flexCenter;
+  margin-top: 26px;
+}
+
+// animation 
+#wrap {
+  position: relative;
+  overflow: hidden;
+  width: 100px;
+  margin: 0 auto;
+}
+.slideConts {
+  width: 500px;
+  height: 500px;
+  margin: 100px auto;
+  -webkit-transition:  1.5s;
+  -o-transition:  1.5s;
+  transition: 1.5s;
+}
+.slideContsL {
+  transform: translate(-800px, 0);
+}
+.slideContsR {
+  transform: translate(800px, 0);
+}
+.slideContsL.show {
+  transform: translate(-150px, 0) !important;
+}
+.slideContsR.show {
+  transform: translate(-150px, 0) !important;
+}
+
+
+// Product ----------------------------------------
+.product_header{
+  @include flexCenter;
+  justify-content: center;
+  padding: 0%;
+  margin-top: 7%;
+  margin-left: 5%;
+  text-align: left;
+  .product_header_text{
+    background-color: #f3f3f3;
+    width: 600px;
+    padding: 5%;
+  }
 }
 
 .products {
+  align-items: center;
+  .container{
   li {
     display: flex;
     flex-wrap: wrap;
@@ -83,14 +147,12 @@ body{
     }
   }
   img{
-    height: 250px;
-    width: 250px;
+    height: 210px;
+    width: 210px;
   }
-
   .imageCarousel{
     position: relative;
   }
-
   .prev-btn,
   .next-btn {
     display: inline-block;
@@ -116,7 +178,6 @@ body{
     left: 3%;
     margin-left: 5px;
   }
-
   .next-btn {
     position: absolute;
     top: 45%;
@@ -125,3 +186,4 @@ body{
   }
 }
 
+}

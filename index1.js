@@ -1,23 +1,3 @@
-//Atena writes code here 
-
-// images show up-------------------------------------------
-function scroll_effect() {
-  var element = document.getElementsByClassName('scroll-up');
-  if(!element) return;
-                      
-  var scrollY = window.pageYOffset;
-  var windowH = window.innerHeight;
-  var showTiming = 100; // timing of showing up elements
-  for(var i = 0; i < element.length; i++) { 
-    var elemClientRect = element[i].getBoundingClientRect(); 
-    var elemY = scrollY + elemClientRect.top; 
-    if(scrollY > elemY - windowH + showTiming) {
-      element[i].classList.add('is-show');
-    }
-  }
-}
-window.addEventListener('scroll', scroll_effect); // start action when scroll
-
 
 // link scroll ----------------------------------------
 var pagelink = document.querySelectorAll('.js-pagelink');
@@ -52,30 +32,71 @@ document.querySelector('.menu-btn').addEventListener('click', function(){
 
 
 // Night mode ----------------------------------------
-const btn = document.querySelector("#btn-dark-mode");
+// const btn = document.querySelector("#btn-dark-mode");
 
-// checkbox on off
-btn.addEventListener("change", () => {
-	if (btn.checked === true) {
-		document.body.classList.remove('light-mode');
-		document.body.classList.add('dark-mode');
-		localStorage.setItem('dark-mode-settings', 'dark');
-	}else {
-		document.body.classList.remove('dark-mode');
-		document.body.classList.add('light-mode');
-		localStorage.setItem('dark-mode-settings', 'light');
-	}
-});
+// // checkbox on off
+// btn.addEventListener("change", () => {
+// 	if (btn.checked === true) {
+// 		document.body.classList.remove('light-mode');
+// 		document.body.classList.add('dark-mode');
+// 		localStorage.setItem('dark-mode-settings', 'dark');
+// 	}else {
+// 		document.body.classList.remove('dark-mode');
+// 		document.body.classList.add('light-mode');
+// 		localStorage.setItem('dark-mode-settings', 'light');
+// 	}
+// });
 	
-// local strage
-if(localStorage.getItem('dark-mode-settings')==='dark') {
-	document.body.classList.add('dark-mode');
-	btn.checked = true;
-}else if (localStorage.getItem('dark-mode-settings')==='light') {
-	document.body.classList.add('light-mode');
-}
+// // local strage
+// if(localStorage.getItem('dark-mode-settings')==='dark') {
+// 	document.body.classList.add('dark-mode');
+// 	btn.checked = true;
+// }else if (localStorage.getItem('dark-mode-settings')==='light') {
+// 	document.body.classList.add('light-mode');
+// }
 
+// arrowUp.setAttribute("class", "fas fa-chevron-up higher-amount");
 
-// Cart item counter ----------------------------------------
+// var cartPara = document.createElement("p");
+// cartPara.setAttribute("class", "item-amount");
+// cartPara.textContent = "1";
 
+// var arrowDown = document.createElement("i");
+// arrowDown.setAttribute("class", "fas fa-chevron-down lower-amount");
 
+// arrowUp.addEventListener('click', () => {
+  // const counter = document.getElementById('cartPara');
+  // counter.innerHTML = ++state.count;
+  // });
+  
+
+// "features" page animation ----------------------------------------
+  var slideConts = document.querySelectorAll('.slideConts');
+  var slideContsRect = []; 
+  var slideContsTop = []; 
+  var windowY = window.pageYOffset; //scroll position
+  var windowH = window.innerHeight; // window height
+  var remainder = 100; 
+
+  for (var i = 0; i < slideConts.length; i++) {
+    slideContsRect.push(slideConts[i].getBoundingClientRect());
+  }
+  for (var i = 0; i < slideContsRect.length; i++) {
+    slideContsTop.push(slideContsRect[i].top + windowY);
+  }
+
+  window.addEventListener('resize', function () {
+    windowH = window.innerHeight;
+  });
+
+  window.addEventListener('scroll', function () {
+    windowY = window.pageYOffset;
+    
+    for (var i = 0; i < slideConts.length; i++) {
+      if(windowY > slideContsTop[i] - windowH + remainder) {
+        slideConts[i].classList.add('show');
+      } else {
+        slideConts[i].classList.remove('show');
+      }
+    }
+  });

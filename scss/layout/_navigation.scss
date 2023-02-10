@@ -1,4 +1,13 @@
 // cart -----------------------
+.menu{
+  height: 100%;
+  overflow: scroll; 
+  position: relative;
+  .menu__item{
+    position: absolute;
+    top:0;
+    position: sticky;
+  }
 .cart-item{
   display: grid;
   align-items: center;
@@ -33,9 +42,9 @@
    grid-column: 3/4;
    grid-row: 2/3;
   }
-  .remove-item{
+  #remove-item{
     color: rgb(105, 104, 104);
-    cursor: pointer;
+    cursor: pointer; 
     grid-column: 2/3;
     grid-row: 3/4;
   }
@@ -51,4 +60,5 @@
     grid-column: 3/4;
     grid-row: 3/4;
   }
+}
 }

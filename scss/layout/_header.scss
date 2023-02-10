@@ -1,3 +1,7 @@
+.header-active{
+  background-color: rgb(226, 224, 224);
+}
+
 header{
   position: fixed;
   background-color: white;
@@ -56,9 +60,27 @@ header{
           list-style: none;
           padding: 0 7rem;
           font-size: 1.1rem;
+          
         }
        }
       }
     }
   }
 
+
+  @media screen and (max-width:639px){
+
+  }
+
+
+  @media screen and (min-width: 768px){
+
+  }
+
+  @media screen and (min-width: 992px){
+
+  }
+
+  @media screen and (min-width:1024px) {
+
+  }
