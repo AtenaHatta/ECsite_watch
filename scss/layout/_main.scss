@@ -4,15 +4,6 @@ body{
   background: var(--main-bg);
 }
 
-.light-mode{
-  --main-text: #000;
-  --main-bg: #fff;
-}
-.dark-mode{
-  --main-text: #fff;
-  --main-bg: #202124;
-}
-
 // Main ----------------------------------------
 .first-wrapper{
   margin-top: 7%;
@@ -184,6 +175,15 @@ body{
     right: 3%;
     margin-right: 5px;
   }
+ }
 }
 
+// Dark mode ---------------------------------------
+.light-mode{
+  --main-text: #000;
+  --main-bg: #fff;
+}
+.dark-mode{
+  --main-text: #fff;
+  --main-bg: #202124;
 }
