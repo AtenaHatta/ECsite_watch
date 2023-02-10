@@ -106,33 +106,15 @@ console.log(i)
         cartDivItem.append(cartPara);
         cartDivItem.append(arrowDown);
         
-        
         cartContainer.append(cartDivItem);
 
-        //////////////===================///////////////////
-
-        // const removeBtn = document.getElementById('removeAll')
-        // //remove all items
-        // var cartItems = document.querySelectorAll(".cart-item");
-        // removeBtn.addEventListener("click", () => {
-        //   // cartItems.remove();
-        //   cartItems.forEach((item) => {
-        //     item.remove()
-        //   })
-        // });
-
-        //remove one items
-        // cartContainer.addEventListener('click', (e) => {
-        //   console.dir(e.target);
-        //   if (e.target.parentElement.childNodes[3] === "remove-item") {
-        //     const listToDelete = e.target.parentNode;
-        //     cartItems.remove()
-        //   }
-        // })
+        let value = 0;
 
         removeAll.addEventListener("click", deleteProduct);
+
+
         function deleteProduct(e) {
-          let value = "$ " + 0;
+          value = "your total is $ " + 0;
           let cartItem;
           let clearLast ;                        
           if (e.target.tagName === "BUTTON") {
@@ -141,6 +123,7 @@ console.log(i)
             cartItem.innerHTML = ""
             clearLast.innerHTML = value
             console.dir(clearLast);// this removes from the DOM only
+
           }
         }
 
@@ -153,7 +136,6 @@ console.log(i)
             cartItem = e.target.parentElement;
             cartItem.remove();
 
-
             SumCalculatorNegative()
              // this removes from the DOM only
           }
@@ -161,6 +143,7 @@ console.log(i)
 
         let state = { counter: 1 };
         const counter = cartDivItem.querySelector(".item-amount");
+        
         arrowUp.addEventListener("click", (e) => {
           counter.textContent = ++state.counter;
 
@@ -171,15 +154,6 @@ console.log(i)
             counter.textContent = --state.counter;
           }
         });
-
-        
-        
-        // Sum()
-        // function Sum() {
-        //   let SumHolder = 0;
-        //   SumHolder += watch.Description;
-        //   cartSumValue.textContent = SumHolder;
-        // }
         
         console.dir(cartContainer);
 
@@ -187,37 +161,32 @@ console.log(i)
           SumCalculator()
         
           function SumCalculator() {
-            
-            
-            let value = 0
             Array.from(cartContainer.children).forEach(item => {
               
               if(item.className === 'cart-item'){
                 value = value + Number(item.childNodes[2].textContent)
                 cartSumValue.textContent = value
+                console.log(value);
+                console.log(cartSumValue.textContent);
+                document.getElementById("total").innerHTML = "your total is $" + value
               }
-              const finalValue = value
+              const finalValue = value;
             });
           }
 
-           
           function SumCalculatorNegative() {
-            
-            let value = "";
+            value = 0;
             Array.from(cartContainer.children).forEach(item => {
-              
               if(item.className === 'cart-item'){
-                value -= Number(item.childNodes[2].textContent)
-                cartSumValue.textContent = value
+                value -= Number(item.childNodes[2].textContent);
               }
             });
+            console.log(value);
+            //For some reason this returns a negative number, but we can comvert to positive with
+            document.getElementById("total").innerHTML = "your total is $" + value * -1
           }
-        
-
 
       })
-
-
 
       div.append(image);
       div.append(prevBtn);
@@ -235,13 +204,8 @@ console.log(i)
     const removeAll = document.querySelector(".cart-footer");
     const cartSumValue = removeAll.querySelector(".cart-total");
     const cartContainer = document.querySelector(".cart-content");
-    //Using this will select ONLY the first image that has the next-btn class
-    // const btnRight = document.querySelector(".next-btn");
-    // const btnLeft = document.querySelector(".prev-btn");
-  
   });
 
-//Header Scroll background change
 const headerColor = document.querySelector(".header-fixed");
 window.onscroll = () => {
   if (window.scrollY > 100) {
