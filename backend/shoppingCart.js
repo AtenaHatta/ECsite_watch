@@ -1,4 +1,10 @@
-// fetch from new express API endpoint named get all watches
+// Shopping cart menu ------------------------------------------------------------------------------
+document.querySelector('.menu-btn').addEventListener('click', function(){
+  document.querySelector('.menu').classList.toggle('is-active');
+});
+
+
+// fetch from new express API endpoint named get all watches ----------------------------------------
 fetch("http://localhost:3000/GetAllWatches")
   .then((res) => res.text())
   .then((watchData) => {
@@ -8,9 +14,11 @@ fetch("http://localhost:3000/GetAllWatches")
     var container = document.getElementsByClassName("ul-grid")[0];
     // for each watch in the resulting data we create Javascript elements to put into the DOM.
     watchData.forEach((watch,i) => {
+      console.log(i)
+      
       //li
       var li = document.createElement("li");
-console.log(i)
+
       //div
       var div = document.createElement("div");
       div.setAttribute("class", "imageCarousel");
@@ -103,8 +111,10 @@ console.log(i)
         cartDivItem.append(arrowUp);
         cartDivItem.append(cartPara);
         cartDivItem.append(arrowDown);
+
         
         cartContainer.append(cartDivItem);
+        ////////////////////////////////////
 
         let value = 0;
 
@@ -204,11 +214,31 @@ console.log(i)
     const cartContainer = document.querySelector(".cart-content");
   });
 
-const headerColor = document.querySelector(".header-fixed");
-window.onscroll = () => {
-  if (window.scrollY > 100) {
-    headerColor.classList.add("header-active");
-  } else {
-    headerColor.classList.remove("header-active");
-  }
-};
+
+
+// const headerColor = document.querySelector(".header-fixed");
+// window.onscroll = () => {
+//   if (window.scrollY > 100) {
+//     headerColor.classList.add("header-active");
+//   } else {
+//     headerColor.classList.remove("header-active");
+//   }
+// };
+
+// Item counter ---------------------------------
+arrowUp.setAttribute("class", "fas fa-chevron-up higher-amount");
+
+var cartPara = document.createElement("p");
+cartPara.setAttribute("class", "item-amount");
+cartPara.textContent = "1";
+
+var arrowDown = document.createElement("i");
+arrowDown.setAttribute("class", "fas fa-chevron-down lower-amount");
+
+arrowUp.addEventListener('click', () => {
+  const counter = document.getElementById('cartPara');
+  counter.innerHTML = ++state.count;
+  });
+
+  
+

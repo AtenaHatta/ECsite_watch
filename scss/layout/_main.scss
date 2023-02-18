@@ -179,11 +179,58 @@ body{
 }
 
 // Dark mode ---------------------------------------
-.light-mode{
-  --main-text: #000;
-  --main-bg: #fff;
+//JS
+.light-theme {
+  background: #fff;
+  color: #333;
 }
-.dark-mode{
-  --main-text: #fff;
-  --main-bg: #202124;
+.dark-theme {
+  background: #000;
+  color: #ddd
 }
+
+//html * CSS
+.toggle_input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.toggle_label {
+  width: 30px;
+  height: 20px;
+  background: #ccc;
+  position: relative;
+  display: inline-block;
+  border-radius: 40px;
+  transition: 0.4s;
+  box-sizing: border-box;
+}
+
+.toggle_label:after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  background: #000000;
+  box-shadow: 0 0 5px rgba(250, 248, 248, 0.2);
+  transition: 0.4s;
+}
+
+.toggle_input:checked + .toggle_label {
+  background-color: #ccc;
+}
+
+.toggle_input:checked + .toggle_label:after {
+  left: 10px;
+}
+

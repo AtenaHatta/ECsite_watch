@@ -1,5 +1,4 @@
-
-// link scroll ----------------------------------------
+// header link scroll ----------------------------------------
 var pagelink = document.querySelectorAll('.js-pagelink');
  
 var smoothScrollType;
@@ -24,51 +23,6 @@ function smoothScroll(e) {
     });
 }
 
-
-// Shopping cart menu ----------------------------------------
-document.querySelector('.menu-btn').addEventListener('click', function(){
-  document.querySelector('.menu').classList.toggle('is-active');
-});
-
-
-// Night mode ----------------------------------------
-// const btn = document.querySelector("#btn-dark-mode");
-
-// // checkbox on off
-// btn.addEventListener("change", () => {
-// 	if (btn.checked === true) {
-// 		document.body.classList.remove('light-mode');
-// 		document.body.classList.add('dark-mode');
-// 		localStorage.setItem('dark-mode-settings', 'dark');
-// 	}else {
-// 		document.body.classList.remove('dark-mode');
-// 		document.body.classList.add('light-mode');
-// 		localStorage.setItem('dark-mode-settings', 'light');
-// 	}
-// });
-	
-// // local strage
-// if(localStorage.getItem('dark-mode-settings')==='dark') {
-// 	document.body.classList.add('dark-mode');
-// 	btn.checked = true;
-// }else if (localStorage.getItem('dark-mode-settings')==='light') {
-// 	document.body.classList.add('light-mode');
-// }
-
-// arrowUp.setAttribute("class", "fas fa-chevron-up higher-amount");
-
-// var cartPara = document.createElement("p");
-// cartPara.setAttribute("class", "item-amount");
-// cartPara.textContent = "1";
-
-// var arrowDown = document.createElement("i");
-// arrowDown.setAttribute("class", "fas fa-chevron-down lower-amount");
-
-// arrowUp.addEventListener('click', () => {
-  // const counter = document.getElementById('cartPara');
-  // counter.innerHTML = ++state.count;
-  // });
-  
 
 // "features" page animation ----------------------------------------
   var slideConts = document.querySelectorAll('.slideConts');
@@ -100,3 +54,12 @@ document.querySelector('.menu-btn').addEventListener('click', function(){
       }
     }
   });
+
+
+
+  
+
+
+
+
+  

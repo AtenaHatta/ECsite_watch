@@ -42,7 +42,7 @@ const watches = [
     {
         "id" : 6,
         "Name" : "Rolex",
-       "Description" : "900", 
+       "Description" : 900, 
        "image": ["https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw9c35373d/images/large/637848004374586527-2303254.png?sw=750&sh=750&sm=fit&sfrm=png","https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw88fb2255/images/large/638089068818065785-2416551.png?sw=750&sh=750&sm=fit&sfrm=png", "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw35d6eefe/images/large/638089068818065785-2416735.png?sw=750&sh=750&sm=fit&sfrm=png"]
     },
     {
@@ -97,7 +97,7 @@ app.get('/GetAllWatches', (req, res) => {
     res.json(watches);
   })
 
-  // write an endpoint which gets a watch BY ID
+// write an endpoint which gets a watch BY ID
 // app.get('/getID', (req, res) => {
 //     res.json(watches{id})
 // })
